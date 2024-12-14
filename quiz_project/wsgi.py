@@ -8,11 +8,13 @@ https://docs.djangoproject.com/en/5.1/howto/deployment/wsgi/
 """
 
 import os
-
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')
+# Ensure that the settings module is set correctly
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'quiz_project.settings')
 
+# Get the WSGI application
 application = get_wsgi_application()
 
+# This may not be needed, but it ensures compatibility with WSGI-based hosting
 app = application

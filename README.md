@@ -31,7 +31,7 @@ Make sure you have Python 3.6+ and pip installed on your machine. If you don't h
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/quiz-app.git
+    git clone https://github.com/Hemant-Shashikant-Yadav/Python-Django-Intern-at-Conceptile.git
     cd quiz-app
     ```
 
@@ -65,36 +65,6 @@ Make sure you have Python 3.6+ and pip installed on your machine. If you don't h
     ```bash
     python manage.py createsuperuser
     ```
-
-## Project Structure
-
-Here's an overview of the project's file structure:
-
-```
-quiz-app/
-│
-├── quiz/
-│   ├── migrations/
-│   ├── static/
-│   ├── templates/
-│   │   └── quiz/
-│   ├── __init__.py
-│   ├── admin.py
-│   ├── apps.py
-│   ├── forms.py
-│   ├── models.py
-│   ├── tests.py
-│   ├── urls.py
-│   └── views.py
-├── manage.py
-├── requirements.txt
-└── README.md
-```
-
-- **quiz/**: The main app containing all quiz-related functionality, including views, models, and templates.
-- **requirements.txt**: Lists the Python packages required to run the project.
-- **manage.py**: The main script for managing the Django project.
-- **README.md**: This file, providing project documentation.
 
 ## Setting Up the Environment
 

@@ -110,13 +110,6 @@ python manage.py runserver
 
 Once the server is running, open your browser and visit `http://localhost:8000` to access the application.
 
-## Testing
-
-The application includes test coverage for most of the functionality. To run tests, use:
-
-```bash
-python manage.py test
-```
 
 This will run the test cases defined in the `tests.py` file.
 

@@ -1,3 +1,5 @@
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login, logout
 from django.shortcuts import render, redirect
 from django.views.decorators.http import require_http_methods
 from django.contrib import messages
@@ -118,4 +120,19 @@ def quiz_summary(request, session_id):
     except QuizSession.DoesNotExist:
         messages.error(request, "Invalid quiz session!")
         return redirect('dashboard')
+
+def signup(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)  # Log the user in after signup
+            return redirect('dashboard')
+    else:
+        form = UserCreationForm()
+    return render(request, 'registration/signup.html', {'form': form})
+
+def custom_logout(request):
+    logout(request)
+    return redirect('login')  # Redirect to the login page
 

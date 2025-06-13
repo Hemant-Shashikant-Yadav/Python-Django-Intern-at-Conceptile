@@ -125,3 +125,6 @@ STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles_build', 'static')
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGOUT_REDIRECT_URL = '/accounts/login/'  # Redirect to the login page after logout
+LOGIN_REDIRECT_URL = '/'  # Redirect to the dashboard after login
